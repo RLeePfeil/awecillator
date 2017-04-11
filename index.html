@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Awe-cillator</title>
+  <meta charset="UTF-8">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .controls span {
+      display: block;
+      text-align: center;
+      padding: 1em;
+      width: 100%;
+      min-width: 5em;
+      max-width: 50%;
+      margin: 0 auto .5em;
+      background-color: #898;
+      color: #FFF;
+      box-sizing: padding-box;
+    }
+  </style>
+
+</head>
+<body>
+  <div id="control-bar">
+    <span id="btn-play"></span>
+  </div>
+
+  <div class="controls">
+    <span onclick="piano.init()">Create Piano</span>
+    <br/>
+    <span onclick="awe.init()">Init Awecillator</span>
+    <br/>
+    <span onclick="awe.mute()">Mute Awecillator</span>
+    <br/>
+    <span onclick="awe.whicharpeggio++">next arp</span>
+    <span onclick="awe.whicharpeggio--">prev arp</span>
+    <span onclick="awe.key++">next key</span>
+    <span onclick="awe.key--">prev key</span>
+  </div>
+
+  <div id="piano-container"></div>
+
+  <script src="jquery-3.1.0.min.js"></script>
+
+  <link href="piano.css" rel="stylesheet" type="text/css" />
+  <script src="piano.js"></script>
+
+  <script src="keyboard.js"></script>
+  <script src="mic.js"></script>
+  <script src="awecillator.js"></script>
+
+  <script>
+    //piano.init();
+    //awe.init();
+  </script>
+</body>
+</html>
